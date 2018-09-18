@@ -19,6 +19,20 @@ import javax.swing.WindowConstants;
 public class PaintComponentSample extends JPanel{
     //利用 paintComponent 讓 JPanel 畫出一個橢圓
     
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
+        int WIDTH=this.getWidth();
+        int HEIGHT=this.getHeight();
+        //g.drawOval(0, 0, WIDTH, HEIGHT);
+        for (int i=0;i<100;i++){
+        g.draw3DRect(i*2,i*2,i,i,true);
+        };
+        //g.draw3DRect(10,50,200,200, true);
+        //g.fill3DRect(100, 10, 200, 200, true);
+        
+    }
+
     //////////////////////////////////////////
     /**
      * @param args the command line arguments
